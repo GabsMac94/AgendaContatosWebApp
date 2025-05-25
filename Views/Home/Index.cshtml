@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Bem-vindo";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center">
+                    <h1 class="display-5 fw-bold mb-4 text-primary">Sistema de Agenda de Contatos</h1>
+                    <p class="lead">
+                        Gerencie facilmente os dados de seus contatos pessoais ou profissionais com praticidade e segurança.
+                    </p>
+                    <hr />
+                    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                        <a class="btn btn-success btn-lg" asp-controller="Contato" asp-action="Index">
+                            Acessar Agenda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

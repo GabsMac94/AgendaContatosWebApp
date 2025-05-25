@@ -1,0 +1,39 @@
+@model AgendaContatos.Models.Contato
+
+@{
+    ViewData["Title"] = "Excluir Contato";
+}
+
+<div class="container mt-5">
+    <div class="card shadow border-danger">
+        <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Excluir Contato</h4>
+            <a class="btn btn-light text-danger border" asp-action="Index">Cancelar</a>
+        </div>
+        <div class="card-body">
+            <h5 class="text-danger">Tem certeza que deseja excluir este contato?</h5>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">Nome</dt>
+                <dd class="col-sm-9">@Model.Nome</dd>
+
+                <dt class="col-sm-3">Apelido</dt>
+                <dd class="col-sm-9">@Model.Apelido</dd>
+
+                <dt class="col-sm-3">CPF</dt>
+                <dd class="col-sm-9">@Model.CPF</dd>
+
+                <dt class="col-sm-3">Telefone</dt>
+                <dd class="col-sm-9">@Model.Telefone</dd>
+
+                <dt class="col-sm-3">E-mail</dt>
+                <dd class="col-sm-9">@Model.Email</dd>
+            </dl>
+
+            <form asp-action="DeleteConfirmed" method="post">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger btn-lg">Excluir</button>
+            </form>
+        </div>
+    </div>
+</div>
